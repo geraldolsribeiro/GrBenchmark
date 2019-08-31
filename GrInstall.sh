@@ -1,0 +1,346 @@
+#!/bin/bash
+### ----------------------------------------------------------------------
+### Copyright (C) 2017 Geraldo Ribeiro <geraldo@intmain.io>
+### ----------------------------------------------------------------------
+
+export PackageName=GrFaker
+export SKIP_WIN32=YES
+export SKIP_WIN64=YES
+export SKIP_TEST_WIN32=YES
+export SKIP_TEST_WIN64=YES
+
+function installFiles {
+  copyToInclude GrFaker.hpp
+  copyToLib     libGrFaker.a
+  copyToDat     femaleFirstname.dat
+  copyToDat     lastname.dat
+  copyToDat     lorem.dat
+  copyToDat     maleFirstname.dat
+  copyToDat     maleSuffix.dat
+  copyToDat     tripDescription.dat
+  copyToDat     tripDestiny.dat
+  copyToDat     tripImage.dat
+  copyToDat     menAvatarImage.dat
+  copyToDat     womenAvatarImage.dat
+
+  mkdir -p  "${LOCAL_PACKAGE_DIR}${DEPLOY_PATH}/${OS}/usr/share/Gr/dat/${PackageName}/trip"
+  copyToDat     trip/trip_1000.jpg
+  copyToDat     trip/trip_1001.jpg
+  copyToDat     trip/trip_1002.jpg
+  copyToDat     trip/trip_1003.jpg
+  copyToDat     trip/trip_1004.jpg
+  copyToDat     trip/trip_1005.jpg
+  copyToDat     trip/trip_1006.jpg
+  copyToDat     trip/trip_1007.jpg
+  copyToDat     trip/trip_1008.jpg
+  copyToDat     trip/trip_1009.jpg
+  copyToDat     trip/trip_1010.jpg
+  copyToDat     trip/trip_1011.jpg
+  copyToDat     trip/trip_1012.jpg
+  copyToDat     trip/trip_1013.jpg
+  copyToDat     trip/trip_1014.jpg
+  copyToDat     trip/trip_1015.jpg
+  copyToDat     trip/trip_1016.jpg
+  copyToDat     trip/trip_1017.jpg
+  copyToDat     trip/trip_1018.jpg
+  copyToDat     trip/trip_1019.jpg
+  copyToDat     trip/trip_1020.jpg
+  copyToDat     trip/trip_1021.jpg
+  copyToDat     trip/trip_1022.jpg
+  copyToDat     trip/trip_1023.jpg
+  copyToDat     trip/trip_1024.jpg
+  copyToDat     trip/trip_1025.jpg
+  copyToDat     trip/trip_1026.jpg
+  copyToDat     trip/trip_1027.jpg
+  copyToDat     trip/trip_1028.jpg
+  copyToDat     trip/trip_1029.jpg
+  copyToDat     trip/trip_1030.jpg
+  copyToDat     trip/trip_1031.jpg
+  copyToDat     trip/trip_1032.jpg
+  copyToDat     trip/trip_1033.jpg
+  copyToDat     trip/trip_1034.jpg
+  copyToDat     trip/trip_1035.jpg
+  copyToDat     trip/trip_1036.jpg
+  copyToDat     trip/trip_1037.jpg
+  copyToDat     trip/trip_1038.jpg
+  copyToDat     trip/trip_1039.jpg
+  copyToDat     trip/trip_1040.jpg
+  copyToDat     trip/trip_1041.jpg
+  copyToDat     trip/trip_1042.jpg
+  copyToDat     trip/trip_1043.jpg
+  copyToDat     trip/trip_1044.jpg
+  copyToDat     trip/trip_1045.jpg
+  copyToDat     trip/trip_1046.jpg
+  copyToDat     trip/trip_1047.jpg
+  copyToDat     trip/trip_1048.jpg
+  copyToDat     trip/trip_1049.jpg
+  copyToDat     trip/trip_1050.jpg
+  copyToDat     trip/trip_1051.jpg
+  copyToDat     trip/trip_1052.jpg
+  copyToDat     trip/trip_1053.jpg
+  copyToDat     trip/trip_1054.jpg
+  copyToDat     trip/trip_1055.jpg
+  copyToDat     trip/trip_1056.jpg
+  copyToDat     trip/trip_1057.jpg
+  copyToDat     trip/trip_1058.jpg
+  copyToDat     trip/trip_1059.jpg
+  copyToDat     trip/trip_1060.jpg
+  copyToDat     trip/trip_1061.jpg
+  copyToDat     trip/trip_1062.jpg
+  copyToDat     trip/trip_1063.jpg
+  copyToDat     trip/trip_1064.jpg
+  copyToDat     trip/trip_1065.jpg
+  copyToDat     trip/trip_1066.jpg
+  copyToDat     trip/trip_1067.jpg
+  copyToDat     trip/trip_1068.jpg
+  copyToDat     trip/trip_1069.jpg
+  copyToDat     trip/trip_1070.jpg
+  copyToDat     trip/trip_1071.jpg
+  copyToDat     trip/trip_1072.jpg
+  copyToDat     trip/trip_1073.jpg
+  copyToDat     trip/trip_1074.jpg
+  copyToDat     trip/trip_1075.jpg
+  copyToDat     trip/trip_1076.jpg
+  copyToDat     trip/trip_1077.jpg
+  copyToDat     trip/trip_1078.jpg
+  copyToDat     trip/trip_1079.jpg
+  copyToDat     trip/trip_1080.jpg
+  copyToDat     trip/trip_1081.jpg
+  copyToDat     trip/trip_1082.jpg
+  copyToDat     trip/trip_1083.jpg
+  copyToDat     trip/trip_1084.jpg
+  copyToDat     trip/trip_1085.jpg
+  copyToDat     trip/trip_1086.jpg
+  copyToDat     trip/trip_1087.jpg
+  copyToDat     trip/trip_1088.jpg
+  copyToDat     trip/trip_1089.jpg
+  copyToDat     trip/trip_1090.jpg
+  copyToDat     trip/trip_1091.jpg
+  copyToDat     trip/trip_1092.jpg
+
+  mkdir -p  "${LOCAL_PACKAGE_DIR}${DEPLOY_PATH}/${OS}/usr/share/Gr/dat/${PackageName}/avatar"
+
+  copyToDat     avatar/men_000.jpg
+  copyToDat     avatar/men_002.jpg
+  copyToDat     avatar/men_003.jpg
+  copyToDat     avatar/men_004.jpg
+  copyToDat     avatar/men_005.jpg
+  copyToDat     avatar/men_006.jpg
+  copyToDat     avatar/men_007.jpg
+  copyToDat     avatar/men_008.jpg
+  copyToDat     avatar/men_009.jpg
+  copyToDat     avatar/men_010.jpg
+  copyToDat     avatar/men_011.jpg
+  copyToDat     avatar/men_012.jpg
+  copyToDat     avatar/men_013.jpg
+  copyToDat     avatar/men_014.jpg
+  copyToDat     avatar/men_015.jpg
+  copyToDat     avatar/men_016.jpg
+  copyToDat     avatar/men_017.jpg
+  copyToDat     avatar/men_018.jpg
+  copyToDat     avatar/men_019.jpg
+  copyToDat     avatar/men_020.jpg
+  copyToDat     avatar/men_021.jpg
+  copyToDat     avatar/men_022.jpg
+  copyToDat     avatar/men_023.jpg
+  copyToDat     avatar/men_024.jpg
+  copyToDat     avatar/men_025.jpg
+  copyToDat     avatar/men_026.jpg
+  copyToDat     avatar/men_027.jpg
+  copyToDat     avatar/men_028.jpg
+  copyToDat     avatar/men_029.jpg
+  copyToDat     avatar/men_030.jpg
+  copyToDat     avatar/men_031.jpg
+  copyToDat     avatar/men_032.jpg
+  copyToDat     avatar/men_033.jpg
+  copyToDat     avatar/men_034.jpg
+  copyToDat     avatar/men_035.jpg
+  copyToDat     avatar/men_036.jpg
+  copyToDat     avatar/men_037.jpg
+  copyToDat     avatar/men_038.jpg
+  copyToDat     avatar/men_039.jpg
+  copyToDat     avatar/men_040.jpg
+  copyToDat     avatar/men_041.jpg
+  copyToDat     avatar/men_042.jpg
+  copyToDat     avatar/men_043.jpg
+  copyToDat     avatar/men_044.jpg
+  copyToDat     avatar/men_045.jpg
+  copyToDat     avatar/men_046.jpg
+  copyToDat     avatar/men_047.jpg
+  copyToDat     avatar/men_048.jpg
+  copyToDat     avatar/men_049.jpg
+  copyToDat     avatar/men_050.jpg
+  copyToDat     avatar/men_051.jpg
+  copyToDat     avatar/men_052.jpg
+  copyToDat     avatar/men_053.jpg
+  copyToDat     avatar/men_054.jpg
+  copyToDat     avatar/men_055.jpg
+  copyToDat     avatar/men_056.jpg
+  copyToDat     avatar/men_057.jpg
+  copyToDat     avatar/men_058.jpg
+  copyToDat     avatar/men_059.jpg
+  copyToDat     avatar/men_060.jpg
+  copyToDat     avatar/men_061.jpg
+  copyToDat     avatar/men_062.jpg
+  copyToDat     avatar/men_063.jpg
+  copyToDat     avatar/men_064.jpg
+  copyToDat     avatar/men_065.jpg
+  copyToDat     avatar/men_066.jpg
+  copyToDat     avatar/men_067.jpg
+  copyToDat     avatar/men_068.jpg
+  copyToDat     avatar/men_069.jpg
+  copyToDat     avatar/men_070.jpg
+  copyToDat     avatar/men_071.jpg
+  copyToDat     avatar/men_072.jpg
+  copyToDat     avatar/men_073.jpg
+  copyToDat     avatar/men_074.jpg
+  copyToDat     avatar/men_075.jpg
+  copyToDat     avatar/men_076.jpg
+  copyToDat     avatar/men_077.jpg
+  copyToDat     avatar/men_078.jpg
+  copyToDat     avatar/men_079.jpg
+  copyToDat     avatar/men_080.jpg
+  copyToDat     avatar/men_081.jpg
+  copyToDat     avatar/men_082.jpg
+  copyToDat     avatar/men_083.jpg
+  copyToDat     avatar/men_084.jpg
+  copyToDat     avatar/men_085.jpg
+  copyToDat     avatar/men_086.jpg
+  copyToDat     avatar/men_087.jpg
+  copyToDat     avatar/men_088.jpg
+  copyToDat     avatar/men_089.jpg
+  copyToDat     avatar/men_090.jpg
+  copyToDat     avatar/men_091.jpg
+  copyToDat     avatar/men_092.jpg
+  copyToDat     avatar/men_093.jpg
+  copyToDat     avatar/men_094.jpg
+  copyToDat     avatar/men_095.jpg
+  copyToDat     avatar/men_096.jpg
+  copyToDat     avatar/men_097.jpg
+  copyToDat     avatar/men_098.jpg
+  copyToDat     avatar/men_099.jpg
+  copyToDat     avatar/women_001.jpg
+  copyToDat     avatar/women_002.jpg
+  copyToDat     avatar/women_003.jpg
+  copyToDat     avatar/women_004.jpg
+  copyToDat     avatar/women_005.jpg
+  copyToDat     avatar/women_006.jpg
+  copyToDat     avatar/women_007.jpg
+  copyToDat     avatar/women_008.jpg
+  copyToDat     avatar/women_009.jpg
+  copyToDat     avatar/women_010.jpg
+  copyToDat     avatar/women_011.jpg
+  copyToDat     avatar/women_012.jpg
+  copyToDat     avatar/women_013.jpg
+  copyToDat     avatar/women_014.jpg
+  copyToDat     avatar/women_015.jpg
+  copyToDat     avatar/women_016.jpg
+  copyToDat     avatar/women_017.jpg
+  copyToDat     avatar/women_018.jpg
+  copyToDat     avatar/women_019.jpg
+  copyToDat     avatar/women_020.jpg
+  copyToDat     avatar/women_021.jpg
+  copyToDat     avatar/women_022.jpg
+  copyToDat     avatar/women_023.jpg
+  copyToDat     avatar/women_024.jpg
+  copyToDat     avatar/women_025.jpg
+  copyToDat     avatar/women_026.jpg
+  copyToDat     avatar/women_027.jpg
+  copyToDat     avatar/women_028.jpg
+  copyToDat     avatar/women_029.jpg
+  copyToDat     avatar/women_030.jpg
+  copyToDat     avatar/women_031.jpg
+  copyToDat     avatar/women_032.jpg
+  copyToDat     avatar/women_033.jpg
+  copyToDat     avatar/women_034.jpg
+  copyToDat     avatar/women_035.jpg
+  copyToDat     avatar/women_036.jpg
+  copyToDat     avatar/women_037.jpg
+  copyToDat     avatar/women_038.jpg
+  copyToDat     avatar/women_039.jpg
+  copyToDat     avatar/women_040.jpg
+  copyToDat     avatar/women_041.jpg
+  copyToDat     avatar/women_042.jpg
+  copyToDat     avatar/women_043.jpg
+  copyToDat     avatar/women_044.jpg
+  copyToDat     avatar/women_045.jpg
+  copyToDat     avatar/women_046.jpg
+  copyToDat     avatar/women_047.jpg
+  copyToDat     avatar/women_048.jpg
+  copyToDat     avatar/women_049.jpg
+  copyToDat     avatar/women_050.jpg
+  copyToDat     avatar/women_051.jpg
+  copyToDat     avatar/women_052.jpg
+  copyToDat     avatar/women_053.jpg
+  copyToDat     avatar/women_054.jpg
+  copyToDat     avatar/women_055.jpg
+  copyToDat     avatar/women_056.jpg
+  copyToDat     avatar/women_057.jpg
+  copyToDat     avatar/women_058.jpg
+  copyToDat     avatar/women_059.jpg
+  copyToDat     avatar/women_060.jpg
+  copyToDat     avatar/women_061.jpg
+  copyToDat     avatar/women_062.jpg
+  copyToDat     avatar/women_063.jpg
+  copyToDat     avatar/women_064.jpg
+  copyToDat     avatar/women_065.jpg
+  copyToDat     avatar/women_066.jpg
+  copyToDat     avatar/women_067.jpg
+  copyToDat     avatar/women_068.jpg
+  copyToDat     avatar/women_069.jpg
+  copyToDat     avatar/women_070.jpg
+  copyToDat     avatar/women_071.jpg
+  copyToDat     avatar/women_072.jpg
+  copyToDat     avatar/women_073.jpg
+  copyToDat     avatar/women_074.jpg
+  copyToDat     avatar/women_075.jpg
+  copyToDat     avatar/women_076.jpg
+  copyToDat     avatar/women_077.jpg
+  copyToDat     avatar/women_078.jpg
+  copyToDat     avatar/women_079.jpg
+  copyToDat     avatar/women_080.jpg
+  copyToDat     avatar/women_081.jpg
+  copyToDat     avatar/women_082.jpg
+  copyToDat     avatar/women_083.jpg
+  copyToDat     avatar/women_084.jpg
+  copyToDat     avatar/women_085.jpg
+  copyToDat     avatar/women_086.jpg
+  copyToDat     avatar/women_087.jpg
+  copyToDat     avatar/women_088.jpg
+  copyToDat     avatar/women_089.jpg
+  copyToDat     avatar/women_090.jpg
+  copyToDat     avatar/women_091.jpg
+  copyToDat     avatar/women_092.jpg
+  copyToDat     avatar/women_093.jpg
+  copyToDat     avatar/women_094.jpg
+  copyToDat     avatar/women_095.jpg
+  copyToDat     avatar/women_096.jpg
+  copyToDat     avatar/women_097.jpg
+  copyToDat     avatar/women_098.jpg
+  copyToDat     avatar/women_099.jpg
+}
+
+function installMacOSFiles {
+  installFiles
+}
+
+function installLinuxFiles {
+  installFiles
+}
+
+function installWin32Files {
+  installFiles
+}
+
+function installWin64Files {
+  installFiles
+}
+
+# shellcheck disable=SC1090
+source "/opt/intmain/dev/${OS}/usr/share/Gr/scripts/Common/intmain.bash"
+
+if [ -z "$*" ]; then
+  eval compileTestAndInstall
+else
+  eval "$*"
+fi

@@ -1,0 +1,11 @@
+auditing/*.*
+*.deb
+*.gcda
+*.gcno
+*.gcov
+lib/*.a
+Makefile.depend*
+*.swp
+test/output/*.txt
+TestSuiteCatch
+TestSuite_*.xml
