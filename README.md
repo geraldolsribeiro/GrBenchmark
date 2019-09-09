@@ -32,3 +32,9 @@ O trecho acima poderia gerar as seguintes mensagens de log:
 [2019-08-31 17:35:30.521] [info] Esvaziamento: 1041µs
 [2019-08-31 17:35:30.521] [info] Teste todo: 2476µs
 ```
+
+## Dependências
+
+```bash
+apt install libspdlog-dev
+```
