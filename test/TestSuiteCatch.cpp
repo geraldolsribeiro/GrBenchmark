@@ -9,3 +9,4 @@ using namespace Catch;
 using namespace std;
 
 #include "scenarios/loop.cpp"
+#include "scenarios/rand.cpp"
